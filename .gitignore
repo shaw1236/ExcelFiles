@@ -1,0 +1,5 @@
+build/
+dist/
+xlsfile/__pycache__/
+*~
+*-info*

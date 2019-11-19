@@ -1,0 +1,35 @@
+-- Folder structure:
+setup.py
+README.md
+LICENSE
+xlsfile/__init__.py
+        xlsFile.py
+
+-- Module required: pip, wheel, twine, keyring
+
+-- keyring
+pip install --user keyring
+$keyring set https://test.pypi.org/legacy/ your-username
+$keyring set https://upload.pypi.org/legacy/ your-usernam
+
+-- Step
+$python setup.py sdist bdist_wheel
+$python -m twine upload --skip-existing --verbose --repository-url https://test.pypi.org/legacy/ dist/*
+$pip install --index-url https://test.pypi.org/simple/ --no-deps xlsfile-shaw1236
+
+-- Check 
+https://test.pypi.org/project/xlsfile-shaw1236/<version>/
+C:\Python38\Lib\site-packages\xlsfile
+$python
+$from xlsfile.xlsFile import xlsFile
+
+-- Live
+$python -m twine upload dist/*
+$pip install xlsfile-shaw1236
+
+-- Reference
+https://packaging.python.org/tutorials/packaging-projects/
+https://pypi.org/project/twine/
+https://test.pypi.org/project
+https://pypi.org/project
+© 2019 GitHub, Inc.
