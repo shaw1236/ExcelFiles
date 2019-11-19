@@ -1,16 +1,16 @@
-- Prerequisite modules
+# Prerequisite modules
 
-pandas@0.25.3
+- pandas@0.25.3
 
-openpyxl3.0.1 
+- openpyxl3.0.1 
 
-xlrd@1.2.0
+- xlrd@1.2.0
 
-- Install xlsfile
+# Install xlsfile
 
-pip install xlsfile-shaw1236
+$pip install xlsfile-shaw1236
 
-- How to use xlsfile?
+# How to use xlsfile?
 
 from xlsfile.xlsFile import xlsFile 
 
