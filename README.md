@@ -1,40 +1,53 @@
--- Prerequisite modules
--pandas@0.25.3
--openpyxl3.0.1 
--xlrd@1.2.0
+- Prerequisite modules
 
--- Install xlsfile
-pip install xlsfile --user
+pandas@0.25.3
 
--- How to use xlsfile?
+openpyxl3.0.1 
 
-from xlsfile import xlsfile 
+xlrd@1.2.0
 
-## Csv file testing
+- Install xlsfile
+
+pip install xlsfile-shaw1236
+
+- How to use xlsfile?
+
+from xlsfile.xlsFile import xlsFile 
+
 print("Test csv file")
-contents = xlsfile.readcsv("test2.csv")
-xlsfile.writecsv("test3.csv", contents)
+
+contents = xlsFile.readcsv("test2.csv")
+
+xlsFile.writecsv("test3.csv", contents)
 
 input = {}
+
 input["name"] = ["Test1", "Test2", "Test3"]
+
 input["email"] = ["test1@gmail.com", "test2@yahoo.com", "test3@gmail.com"]
+
 input["name"].append("Test4") 
+
 input["email"].append("test@yahoo.com") 
 
 filename = "testfamily.xlsx"
 
-## Excel file test
 print("\nExcel file test")
-xlsfile.write(filename, input)
-contents = xlsfile.read(filename)
+
+xlsFile.write(filename, input)
+
+contents = xlsFile.read(filename)
+
 print(contents)
 
-## Excel to csv
 print("\nExcel to csv")
-xlsfile.xls2csv(filename, filename.replace(".xlsx", ".csv"))
 
-## csv to Excel
+xlsFile.xls2csv(filename, filename.replace(".xlsx", ".csv"))
+
 print("\ncsv to Excel")
-xlsfile.csv2xls(filename.replace(".xlsx", ".csv"), "testfamily2.xlsx")
-contents = xlsfile.read("testfamily2.xlsx")
+
+xlsFile.csv2xls(filename.replace(".xlsx", ".csv"), "testfamily2.xlsx")
+
+contents = xlsFile.read("testfamily2.xlsx")
+
 print(contents)
